@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4CAF50"
+    android:backgroundTint="#4CAF50"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageViewMoney"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="23dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewGroup"
+        app:layout_constraintEnd_toStartOf="@+id/billValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_action_money" />
+
+    <EditText
+        android:id="@+id/billValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="46dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="0.00"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/peopleQuantity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewMoney"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewGroup"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewResult"
+        app:layout_constraintEnd_toStartOf="@+id/peopleQuantity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewMoney"
+        app:srcCompat="@drawable/ic_action_group" />
+
+    <EditText
+        android:id="@+id/peopleQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="30dp"
+        android:ems="10"
+        android:inputType="number|textPersonName"
+        android:text="2"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/textViewResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewGroup"
+        app:layout_constraintTop_toBottomOf="@+id/billValue" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="250dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="1dp"
+        android:gravity="center"
+        android:text="@string/initialValue"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/floatingActionButtonShare"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewGroup" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonShare"
+        android:layout_width="80dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="149dp"
+        android:backgroundTint="#8BC34A"
+        android:clickable="true"
+        app:backgroundTint="#8BC34A"
+        app:fabSize="auto"
+        app:layout_constraintEnd_toStartOf="@+id/floatingActionButtonListen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult"
+        app:maxImageSize="48dp"
+        app:srcCompat="@android:drawable/ic_menu_share" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonListen"
+        android:layout_width="80dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="1dp"
+        android:clickable="true"
+        app:backgroundTint="#8BC34A"
+        app:layout_constraintStart_toEndOf="@+id/floatingActionButtonShare"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult"
+        app:maxImageSize="48dp"
+        app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
+</androidx.constraintlayout.widget.ConstraintLayout>
